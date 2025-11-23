@@ -1,0 +1,183 @@
+@import url("_font");
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+:root 
+    --header-bg: hsl(246, 80%, 60%)
+    --work-bg: hsl(15, 100%, 70%)
+    --play-bg: hsl(195, 74%, 62%)
+    --study-bg: hsl(348, 100%, 68%)
+    --exercise-bg: hsl(145, 58%, 55%)
+    --social-bg: hsl(264, 64%, 52%)
+    --self-care-bg: hsl(43, 84%, 65%)
+
+    --bg-color: hsl(226, 43%, 10%)
+    --card-bg: hsl(235, 46%, 20%)
+
+    --text-color: hsl(236, 100%, 87%)
+    --purple-accent: hsl(235, 45%, 61%)
+    --white: hsl(235, 45%, 100%)
+
+
+.attribution 
+    font-size: 1.5rem
+    font-weight: bold
+    margin-bottom: 2rem
+    gap: 0.5rem
+    color: var(--text-color)
+    text-align: center
+
+.attribution a 
+    text-decoration: none
+    transition: 1s ease-in-out
+    color: var(--social-bg)
+
+.attribution a:hover,
+.attribution a:active 
+    filter: brightness(1.3)
+
+body
+    background-color: var(--bg-color) 
+    padding: 8rem 2rem
+    color: var(--text-color)
+    font-family: "rubik", sans-serif
+    font-size: 1.6rem
+
+h2 
+    font-size: 1.8rem
+    color:  var(--white)
+    font-weight: bold
+
+.card
+    padding: 3rem
+    max-width: 45rem
+    border-radius: 2rem
+    margin: 0 auto 0 auto
+
+.profile img 
+    border: 0.2rem solid var(--white)
+    width: 6rem
+    border-radius: 50%
+
+.profile 
+    display: flex
+    align-items: center
+    gap: 2rem
+
+h1
+    font-size: 2.5rem
+    font-weight: lighter
+    text-transform: capitalize
+
+.user
+    background-color: var(--header-bg)
+    position: relative
+    grid-template-areas: "user"
+    margin-bottom: 14rem
+
+nav
+    position: absolute
+    bottom: -6rem
+    left: 0
+    background-color: var(--card-bg)
+    font-size: 2rem
+    padding: 2rem 3rem
+    transform: translateY(-1rem)
+    width: 100%
+    border-radius: 0 0 2rem 2rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+nav a
+    color: var(--text-color)
+    transition: 1s ease-in-out
+    cursor: pointer
+    text-decoration: none
+
+a:hover , a:active
+        filter: brightness(1.3)
+
+.title, .status
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.title 
+    margin-bottom: 1rem
+
+
+.card:has(h2)
+    background-color: var(--card-bg)
+    margin-bottom: 7rem
+
+.expand
+    position: relative
+    transform: translateX(-1.5rem)
+
+.expand, .expand::before , .expand::after
+    width: 1rem
+    content: ''
+    height: 1rem
+    border-radius: 50%
+    display: block
+    background-color: var(--purple-accent)
+
+.expand::before 
+    left: -1.5rem
+    position: absolute
+
+.expand::after
+    left: 1.5rem
+    position: absolute
+
+.bigtext 
+    font-size: 3rem
+    color: var(--white)
+    font-weight: lighter
+
+.card:has(h2)
+    position: relative
+
+
+.extra
+    width: 100%
+    content: ''
+    height: 6rem
+    position: absolute
+    left: 0
+    top: -4rem
+    display: flex
+    align-items: center
+    padding-right: 2rem
+    justify-content: flex-end
+    overflow: hidden
+    z-index: -1
+    border-radius: 2rem 2rem 0 0 
+
+.extra img 
+    transform: translateY(-0.5rem)
+    width: 6rem
+
+.work .extra
+    background-color: var(--work-bg)
+
+.play .extra
+    background-color: var(--play-bg)
+
+.study .extra
+    background-color: var(--study-bg)
+
+.exercise .extra
+    background-color: var(--exercise-bg)
+
+.social .extra
+    background-color: var(--social-bg)
+
+.self-care .extra 
+    background-color: var(--self-care-bg)
